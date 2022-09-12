@@ -10,7 +10,7 @@ export class AlertasComponent implements OnInit {
 
 
   @Input() message: string
-  @Input() tipo = 'success'
+  @Input() type = 'success'
 
 
   constructor(
