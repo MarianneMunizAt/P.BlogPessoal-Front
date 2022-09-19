@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 
+
 import { Postagem } from '../model/Postagem';
 import { Tema } from '../model/Tema';
 import { User } from '../model/User';
@@ -9,12 +10,18 @@ import { AuthService } from '../service/auth.service';
 import { PostagemService } from '../service/postagem.service';
 import { TemaService } from '../service/tema.service';
 
+
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent implements OnInit {
+
+
+  constructor(
+    
+    private router: Router
 
     postagem: Postagem = new Postagem()
     listaPostagens: Postagem[]
@@ -33,9 +40,14 @@ export class InicioComponent implements OnInit {
     private temaService: TemaService,
     private authService: AuthService
 
+
   ) { }
 
   ngOnInit() {
+
+    if(environment.token == ''){
+      this.router.navigate(['/entrar'])
+    }
 
     window.scroll(0,0)
 
@@ -85,6 +97,7 @@ export class InicioComponent implements OnInit {
       this.postagem = new Postagem()
       this.getAllPostagens()
     })
+
   }
 
 }
