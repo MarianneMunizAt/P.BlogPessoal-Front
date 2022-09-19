@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Router } from '@angular/router';
 import { User } from '../model/User';
 import { AuthService } from '../service/auth.service';
@@ -9,6 +10,14 @@ import { AuthService } from '../service/auth.service';
   styleUrls: ['./cadastrar.component.css']
 })
 export class CadastrarComponent implements OnInit {
+
+
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
 
 user: User = new User
 confirmSenha: string
@@ -47,5 +56,6 @@ cadastrar(){
       })
     }
 }
+
 
 }
