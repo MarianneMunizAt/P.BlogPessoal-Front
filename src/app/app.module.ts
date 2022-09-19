@@ -11,6 +11,8 @@ import { RodapeComponent } from './rodape/rodape.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { InicioComponent } from './inicio/inicio.component';
+
+
 import { TemaComponent } from './tema/tema.component';
 
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
@@ -21,6 +23,7 @@ import { UserEditComponent } from './edit/user-edit/user-edit.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +31,9 @@ import { UserEditComponent } from './edit/user-edit/user-edit.component';
     RodapeComponent,
     EntrarComponent,
     CadastrarComponent,
+
+    InicioComponent
+
     InicioComponent,
 
     TemaComponent,
@@ -38,6 +44,7 @@ import { UserEditComponent } from './edit/user-edit/user-edit.component';
     PostagemEditComponent,
     PostagemDeleteComponent,
     UserEditComponent
+
 
   ],
   imports: [
