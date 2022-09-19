@@ -1,8 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+
 import { Tema } from '../model/Tema';
 import { TemaService } from '../service/tema.service';
+
+
+
+import { Tema } from '../model/Tema';
+import { TemaService } from '../service/tema.service';
+
+
 
 @Component({
   selector: 'app-tema',
@@ -11,12 +19,18 @@ import { TemaService } from '../service/tema.service';
 })
 export class TemaComponent implements OnInit {
 
+
+
+  constructor(
+    private router: Router
+
     tema: Tema = new Tema()
     listaTemas: Tema[]
 
   constructor(
     private router: Router,
     private temaService: TemaService
+
   ) { }
 
   ngOnInit() {
@@ -24,6 +38,7 @@ export class TemaComponent implements OnInit {
     if(environment.token == ''){
       this.router.navigate(['/entrar'])
     }
+
 
     this.findAllTemas()
   }
@@ -41,5 +56,6 @@ export class TemaComponent implements OnInit {
       this.findAllTemas()
       this.tema = new Tema()
     })
+
   }
 }
