@@ -8,9 +8,11 @@ import { Tema } from '../model/Tema';
   providedIn: 'root'
 })
 export class TemaService {
+
   getAllTemas() {
     throw new Error('Method not implemented.');
   }
+
 
   constructor(private http: HttpClient) { }
 
@@ -18,6 +20,15 @@ export class TemaService {
   token = {
 
     headers: new HttpHeaders().set('Authorization', environment.token)}
+
+
+    getAllTema(): Observable<Tema[]>{
+      return this.http.get<Tema[]>('http://localhost:8080/tema', this.token)
+    }
+
+    postTema(tema: Tema): Observable<Tema>{
+      return this.http.post<Tema>('http://localhost:8080/tema', tema , this.token)
+    }
 
   getAllTema(): Observable<Tema[]>{
    return this.http.get<Tema[]>('http://localhost:8080/tema', this.token)
@@ -38,4 +49,5 @@ export class TemaService {
   deleteTema(id:number){
     return this.http.delete(`http://localhost:8080/tema/${id}`, this.token)
   }
+
 }

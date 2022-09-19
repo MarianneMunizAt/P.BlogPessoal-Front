@@ -12,6 +12,9 @@ import { EntrarComponent } from './entrar/entrar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { InicioComponent } from './inicio/inicio.component';
 
+import { TemaComponent } from './tema/tema.component';
+
+
 
 import { TemaComponent } from './tema/tema.component';
 
@@ -24,6 +27,7 @@ import { UserEditComponent } from './edit/user-edit/user-edit.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,19 +35,14 @@ import { UserEditComponent } from './edit/user-edit/user-edit.component';
     RodapeComponent,
     EntrarComponent,
     CadastrarComponent,
-
-    InicioComponent
-
     InicioComponent,
-
-    TemaComponent,
-
     TemaComponent,
     TemaEditComponent,
     TemaDeleteComponent,
     PostagemEditComponent,
     PostagemDeleteComponent,
     UserEditComponent
+
 
 
   ],

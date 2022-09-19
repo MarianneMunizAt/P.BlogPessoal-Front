@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 
 
-
 import { Postagem } from '../model/Postagem';
 import { Tema } from '../model/Tema';
 import { User } from '../model/User';
@@ -21,9 +20,12 @@ import { TemaService } from '../service/tema.service';
 export class InicioComponent implements OnInit {
 
 
+
+
   constructor(
     
     private router: Router
+
 
 
     postagem: Postagem = new Postagem()
@@ -51,6 +53,7 @@ export class InicioComponent implements OnInit {
     if(environment.token == ''){
       this.router.navigate(['/entrar'])
     }
+
 
 
     window.scroll(0,0)
@@ -101,6 +104,7 @@ export class InicioComponent implements OnInit {
       this.postagem = new Postagem()
       this.getAllPostagens()
     })
+
 
 
   }
