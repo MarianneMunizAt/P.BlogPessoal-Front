@@ -17,6 +17,9 @@
 
                         <input class="form-control" type="text" name="nome" id="nome" placeholder="Seu nome">
 
+
+                        <input class="form-control" type="text" name="nome" id="nome" placeholder="Seu nome">
+
                         <input      [(ngModel)]="user.nome"          class="form-control" type="text" name="nome" id="nome" placeholder="Seu nome">
 
                     </div>
@@ -31,6 +34,7 @@
                         <label for="foto">Foto</label>
                         <input class="form-control" type="text" name="foto" id="foto" placeholder="Link da sua foto">
 
+
                         <input       [(ngModel)]="user.usuario"           class="form-control" type="text" name="usuario" id="usuario" placeholder="Seu usuário">
                     </div>
 
@@ -42,6 +46,9 @@
 
                     <div class="form-group">
                         <label for="senha">Senha</label>
+
+                        <input class="form-control" type="password" name="senha" id="senha"
+
 
                        <input class="form-control" type="password" name="senha" id="senha"
 
@@ -55,6 +62,9 @@
 
                         <input class="form-control" type="password" name="confirmarSenha" id="confirmarSenha"
 
+
+                        <input class="form-control" type="password" name="confirmarSenha" id="confirmarSenha"
+
                         <input       [(ngModel)]="user.senha"       class="form-control" type="password" name="confirmarSenha" id="confirmarSenha"
 
                             placeholder="Confirme sua senha">
@@ -65,8 +75,12 @@
 
                         <select class="form-control" name="tipo" id="tipo">
 
+
+                        <select class="form-control" name="tipo" id="tipo">
+
                         <select class="form-control" name="tipo" id="tipo" (change)="tipoUser($event)">
 
+ 
                             <option>Selecione um tipo de usuário:</option>
                             <option value="normal">Normal</option>
                             <option value="adm">Administrador</option>
@@ -74,12 +88,16 @@
                     </div>
 
                     <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-danger mr-4" routerLink="/entrar">Cancelar</button>
+                        <button type="submit" class="btn btn-success">Cadastrar</button>
+
 
                         <button type="submit" class="btn btn-danger mr-4">Cancelar</button>
                         <button type="submit" class="btn btn-success">Cadastrar</button>
                         <button type="submit" class="btn btn-danger mr-4" routerLink="/entrar">Cancelar</button>
                         <button type="submit" class="btn btn-success" (click)="cadastrar()">Cadastrar</button>
 
+ 
                     </div>
 
 
