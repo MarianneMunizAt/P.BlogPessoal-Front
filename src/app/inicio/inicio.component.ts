@@ -11,7 +11,6 @@ import { PostagemService } from '../service/postagem.service';
 import { TemaService } from '../service/tema.service';
 
 
-
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
@@ -22,9 +21,11 @@ export class InicioComponent implements OnInit {
 
 
 
+
   constructor(
     
     private router: Router
+
 
 
 
@@ -45,7 +46,6 @@ export class InicioComponent implements OnInit {
     private temaService: TemaService,
     private authService: AuthService
 
-
   ) { }
 
   ngOnInit() {
@@ -55,12 +55,12 @@ export class InicioComponent implements OnInit {
     }
 
 
-
     window.scroll(0,0)
 
     if(environment.token == ''){
       this.router.navigate(['/entrar'])
     }
+
 
     this.getAllTemas()
     this.getAllPostagens()
@@ -104,9 +104,6 @@ export class InicioComponent implements OnInit {
       this.postagem = new Postagem()
       this.getAllPostagens()
     })
-
-
-
   }
 
 }

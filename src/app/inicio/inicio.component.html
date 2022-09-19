@@ -15,6 +15,8 @@
 
                 <button class="btn btn-light mr-2" data-toggle="modal" data-target="#novaPostagem"> Nova Postagem</button>
 
+                <button class="btn btn-light mr-2" data-toggle="modal" data-target="#novaPostagem"> Nova Postagem</button>
+
 
                 <button class="btn btn-light mr-2"> Nova Postagem</button>
 
@@ -35,6 +37,7 @@
 
     <nav>
         <div class="nav nav-tabs d-flex justify-content-center" id="nav-todasPostagens-tab" role="tablist">
+
 
           <a class="nav-link active text-secondary font-weight-bold" id="nav-todasPostagens-tab" data-toggle="tab"
            data-target="#todasPostagens" type="button" role="tab" aria-controls="nav-todasPostagens"
@@ -59,6 +62,7 @@
         <div class="tab-pane fade" id="postagensTema" role="tabpanel" 
         aria-labelledby="nav-postagensTema-tab">Postagens por tema</div>
       </div>
+
 
 
 
@@ -154,6 +158,9 @@
             <div class="form-group">
                 <label for="titulo">Título</label>
 
+                <input  [(ngModel)]="postagem.titulo"   type="text" class="form-control" id="titulo" placeholder="Digite o Título">
+
+
                 <input type="text" class="form-control" id="titulo" placeholder="Digite o Título">
 
 
@@ -164,10 +171,14 @@
 
                 <input  [(ngModel)]="postagem.titulo"   type="text" class="form-control" id="titulo" placeholder="Digite o Título">
 
+
             </div>
 
             <div class="form-group">
                 <label for="texto">Texto</label>
+
+                <textarea  [(ngModel)]="postagem.texto"   class="form-control" name="texto" id="texto" rows="3"></textarea>
+
 
                 <textarea class="form-control" name="texto" id="texto" rows="3"></textarea>
 
@@ -184,10 +195,15 @@
 
                 <textarea  [(ngModel)]="postagem.texto"   class="form-control" name="texto" id="texto" rows="3"></textarea>
 
+
             </div>
 
             <div class="form-group">
                 <label for="texto">Escolha um tema ou  <a data-dismiss="modal" routerLink="/tema">cadastre um novo:</a> </label>
+
+                <select  [(ngModel)]="idTema" (change)="findByIdTema()"  name="tema" id="tema" class="form-control">
+                   <option   *ngFor="let item of listaTemas" value="{{item.id}}"> {{item.descricao}}</option> 
+
 
                 <select name="tema" id="tema" class="form-control">
                    <option value=""> Temas</option> 
@@ -206,6 +222,9 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
 
+                <button type="button" class="btn btn-success" data-dismiss="modal" (click)="publicar()" >Publicar</button>
+
+
                 <button type="button" class="btn btn-success">Publicar</button>
 
 
@@ -215,6 +234,7 @@
                 <button type="button" class="btn btn-success">Publicar</button>
 
                 <button type="button" class="btn btn-success" data-dismiss="modal" (click)="publicar()" >Publicar</button>
+
 
             </div>
         </div>
