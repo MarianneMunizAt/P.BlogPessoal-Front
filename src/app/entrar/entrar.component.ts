@@ -14,10 +14,12 @@ import { AuthService } from '../service/auth.service';
 export class EntrarComponent implements OnInit {
 
 
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
 
 userLogin: UserLogin = new UserLogin()
 

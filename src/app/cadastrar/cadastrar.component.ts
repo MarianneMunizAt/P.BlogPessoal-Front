@@ -4,13 +4,13 @@ import { Router } from '@angular/router';
 import { User } from '../model/User';
 import { AuthService } from '../service/auth.service';
 
-
 @Component({
   selector: 'app-cadastrar',
   templateUrl: './cadastrar.component.html',
   styleUrls: ['./cadastrar.component.css']
 })
 export class CadastrarComponent implements OnInit {
+
 
 
   constructor() { }
