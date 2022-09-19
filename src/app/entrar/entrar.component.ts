@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { UserLogin } from '../model/UserLogin';
 import { AuthService } from '../service/auth.service';
+
 
 @Component({
   selector: 'app-entrar',
@@ -10,6 +12,12 @@ import { AuthService } from '../service/auth.service';
   styleUrls: ['./entrar.component.css']
 })
 export class EntrarComponent implements OnInit {
+
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
 
 userLogin: UserLogin = new UserLogin()
 
@@ -49,4 +57,5 @@ userLogin: UserLogin = new UserLogin()
       }
   })
   }
+
 }
